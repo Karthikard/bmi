@@ -17,5 +17,16 @@ function calculate() {
 	} else if (bmi >= 30) {
 		measure = "Your BMI is " + bmi + "You are Obese";
 	}
-	
+	if (weight === 0 ) {
+		document.getElementById("results").innerHTML = error;
+	} else if (height === 0){
+		document.getElementById("results").innerHTML = error;
+	}
+	 else {
+
+		document.getElementById("results").innerHTML = measure;
+	}
+	if (weight < 0) {
+		document.getElementById("results").innerHTML = "Negative Values not Allowed";
+	}
 }
